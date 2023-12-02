@@ -13,18 +13,33 @@
     }
     $logado = $_SESSION['email'];
     $nome_usuario = $_SESSION['nome'];
-
+  
 
     if(!empty($_GET['search']))
     {
         $data = $_GET['search'];
-        $sql = "SELECT * FROM comissao WHERE id_pedido LIKE '%$data%' or nome LIKE '%$data%'   ORDER BY data_pedido DESC";
+
+        $sql="select * from (select id_pedido,nome, comissao,'Detalhe',id_func,data_pedido from comissao 
+        union all
+        select id_pedido,nome ,sum(comissao)  as comissão , 'SOMA TOTAL',id_func ,data_pedido
+        from comissao where data_pedido like '%$data%' or nome like '%$data%' group by nome order by 2,4) tbs where data_pedido like '%$data%' or nome like '%$data%'";
+
+
+
+        //$sql1 = "SELECT * FROM comissao_detalhe WHERE id_pedido LIKE '%$data%' or nome LIKE '%$data%' or data_pedido like '%$data%' ";
     }
     else
     {
-        $sql = "SELECT * FROM comissao ORDER BY data_pedido DESC";
+        $sql = "SELECT * FROM comissao_detalhe ";
     }
     $result = $conexao->query($sql);
+    
+    
+
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -80,7 +95,7 @@
     </nav>
     <br>
     <?php
-        echo "<h4>Bem vindo a INFORMAÇÕES CONTAS A PAGAR </h4>
+        echo "<h4>COMISSÃO FUNCIONARIOS </h4>
         <h5> Usuário: <u>$nome_usuario</u></h5>";
        
     ?>
@@ -89,7 +104,7 @@
      
     <br>
     <div class="box-search">
-        <input type="search" class="form-control w-25" placeholder="Pesquisar por  nome " id="pesquisar">
+        <input type="search" class="form-control w-25" placeholder="Pesquisar por  nome ou data " id="pesquisar">
         <button onclick="searchData()" class="btn btn-primary">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
@@ -97,20 +112,25 @@
         </button>
     </div>
     <br>
-    <div class="d-flex">
-            <a href="cpCadastro.php" class="button">+Contas a Pagar</a>
-        </div>
-        <br>
+    
+
+
+        <!--id_pedido
+    comissao
+    nome
+    Detalhe
+    id_func
+    data_pedido-->
     <div class="m-5">
         <table class="table text-white table-bg">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">Id Pedido</th>
                     <th scope="col">Funcionario</th>
                     <th scope="col">comissão</th>
-                    <th scope="col">mes</th>
+                    <th scope="col">data</th>
 
-                    <th scope="col">...</th>
+                    <th scope="col">Tipo</th>
                 </tr>
             </thead>
             <tbody>
@@ -121,6 +141,7 @@
                         echo "<td>".$user_data['nome']."</td>";
                         echo "<td>".$user_data['comissao']."</td>";
                         echo "<td>".$user_data['data_pedido']."</td>";
+                        echo "<td>".$user_data['Detalhe']."</td>";
                         echo "</tr>";
                     }
                     ?>
