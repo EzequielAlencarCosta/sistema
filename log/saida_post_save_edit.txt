@@ -1,0 +1,71 @@
+CPF: 12345678910
+Número da CTPS: 12321541
+Data de Admissão: 2023-10-02
+Cargo: 2500.00
+Salário: 
+Departamento: tiç
+ID: 12
+UPDATE:CPF: 12345678910
+Número da CTPS: 12321541
+Data de Admissão: 2023-10-02
+Cargo: 2500.00
+Salário: 
+Departamento: tiç
+ID: 12
+UPDATE:CPF: 2147483647
+Número da CTPS: 0912290133
+Data de Admissão: 2001-01-01
+Cargo: 1000.00
+Salário: 
+Departamento: yie
+ID: 6
+UPDATE:CPF: 12345678910
+Número da CTPS: 12321541
+Data de Admissão: 2023-10-02
+Cargo: 2500.00
+Salário: 
+Departamento: tiça
+ID: 12
+UPDATE:CPF: 12345678910
+Número da CTPS: 12321541
+Data de Admissão: 2023-10-02
+Cargo: 2500.00
+Salário: 
+Departamento: tiçw
+ID: 12
+UPDATE:CPF: 2147483647
+Número da CTPS: 0912290133
+Data de Admissão: 2001-01-01
+Cargo: 1000.00
+Salário: 
+Departamento: yir
+ID: 6
+UPDATE:UPDATE funcionarios SET cpf='2147483647',nr_ctps='0912290133',admissao='2001-01-01',cargo='1000.00',salario='',departamento='yir' WHERE id=6CPF: 2147483647
+ Número da CTPS: 0912290133
+ Data de Admissão: 2001-01-01
+Cargo: 1000.00
+Salário: 
+Departamento: yi
+ID: 6
+UPDATE:UPDATE funcionarios SET cpf='2147483647',nr_ctps='0912290133',admissao='2001-01-01',cargo='1000.00',salario='',departamento='yi' WHERE id=6UPDATE:UPDATE funcionarios SET cpf='2147483647',nr_ctps='0912290133',admissao='2001-01-01',cargo='1000.00',salario='',departamento='yi' WHERE id=6UPDATE:UPDATE funcionarios SET cpf='12345678910',nr_ctps='12321541',admissao='2023-10-02',cargo='2500.00',salario='',departamento='tiç' WHERE id=12UPDATE:UPDATE funcionarios SET
+         cpf='2147483647',
+         nr_ctps='0912290133',
+         admissao='2001-01-01',
+         cargo='1000.00',
+         salario='',
+         departamento='yikksd' 
+         WHERE id=6UPDATE:UPDATE funcionarios SET
+         cpf='2147483647',
+         nr_ctps='0912290133',
+         admissao='2001-01-01',
+         cargo='123',
+         salario='',
+         departamento='yikksd' 
+         WHERE id=6UPDATE:UPDATE funcionarios SET
+         cpf='2147483647',
+         nr_ctps='0912290133',
+         admissao='2001-01-01',
+         cargo='tester',
+         salario='10000.00',
+         departamento='yikksd' 
+         WHERE id=6

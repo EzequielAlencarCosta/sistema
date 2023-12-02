@@ -1,0 +1,50 @@
+CPF: 334.567.890-14
+Número da CTPS: 16515
+Data de Admissão: 
+Cargo: ANALISTA
+Salário: 2000,00
+Departamento: TI
+ID: 
+UPDATE:1CPF: 765.432.109-87
+Número da CTPS: 56165
+Data de Admissão: 
+Cargo: ANALISTA
+Salário: 2000,00
+Departamento: TI
+ID: 
+UPDATE:1CPF: 789.012.345-03
+Número da CTPS: 12345
+Data de Admissão: 2023-11-22
+Cargo: ANALISTA
+Salário: 1000,00
+Departamento: GERENCIA
+ID: 
+INSERT:1CPF: 765.432.109-87
+Número da CTPS: 123456
+Data de Admissão: 2023-11-22
+Cargo: ANALISTA
+Salário: 1000,00
+Departamento: GERENCIA
+ID: 
+INSERT:1CPF: 111.222.333-44
+Número da CTPS: 123456
+Data de Admissão: 1985-03-16
+Cargo: diretor
+Salário: 100000
+Departamento: ti
+ID: 
+INSERT:1CPF: 111.222.333-44
+Número da CTPS: 123456
+Data de Admissão: 2020-01-14
+Cargo: diretor
+Salário: 100000
+Departamento: ti
+ID: 
+INSERT:1CPF: 987.654.321-02
+Número da CTPS: 123458
+Data de Admissão: 2021-03-16
+Cargo: analista
+Salário: 12050,00
+Departamento: ti
+ID: 
+INSERT:1
