@@ -121,12 +121,11 @@ function temPermissao($conexao, $idUsuario, $nomeFuncao)
         <a href="usuarioPesquisa.php"><font color=green>Usuários</font></a>
          <!--<a href="vendaCancelamento.php"><font color=green>Cancelamento de Vendas</font></a>-->
         <a href="caPesquisa.php"><font color=green>Controle de Acesso</font></a>
-        <a href="notafiscalMenu.php">Nota Fiscal</a>
-        <a href="#comissaoAtendentes">Comissão dos Atendentes</a>
+        <a href="notafiscalMenu.php"><font color=green>Nota Fiscal</font></a>
+        <a href="comissaoPesquisa.php"><font color=green>Comissão dos Atendentes</font></a>
         <a href="vendaMenu.php"><font color=green>Vendas</font></a>
-        <a href="#promocoes">Promoções</a>
         <a href="cpPesquisa.php"><font color=green>Contas  a Pagar</font></a>
-        <a href="crPesquisa.php"><font color=green>Contas  a Receber</font></a>
+        <a href="crPesquisa.php"><font color=green>Contas  a Receber</font></a> 
         <!-- Adicione outros botões conforme necessário -->
     <?php else : ?>
         <!-- Caso contrário, verifica as permissões individuais -->
