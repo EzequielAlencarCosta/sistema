@@ -72,7 +72,12 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
         </div>
-        
+        <div class="container-fluid">
+            <a class="navbar-brand" href="notafiscalMenu.php">NOTAS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
         <div class="d-flex">
             <a href="sair.php" class="btn btn-danger me-5">Sair</a>
         </div>
@@ -85,7 +90,7 @@
     ?>
     <br>
     <div class="box-search">
-        <input type="search" class="form-control w-25" placeholder="Pesquisar por nome, id e e-mail" id="pesquisar">
+        <input type="search" class="form-control w-25" placeholder="Pesquisar por Nome do cliente e ID da Nota" id="pesquisar">
         <button onclick="searchData()" class="btn btn-primary">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
@@ -113,7 +118,7 @@
                     <th scope="col">Endereço</th>
                     <th scope="col">CPF</th>
                     <th scope="col">Total</th>
-                    <th scope="col">Status Emissao</th>
+                    <th scope="col">Status Emissão</th>
                 </tr>
             </thead>
             <tbody>

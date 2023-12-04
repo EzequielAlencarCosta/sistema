@@ -123,7 +123,7 @@ else
     <div class="box">
         <form ><!--action="funcionarioPesquisa.php" method="POST">-->
             <fieldset>
-                <legend><b>Fórmulário de Funcionarios</b></legend>
+                <legend><b>Fórmulário de Funcionários</b></legend>
                 <br><!--cpf,nr_ctps,admissao,cargo,salario,departamento-->
                 <div class="inputBox">
                     <input type="text" name="cpf" id="cpf" class="inputUser" value="<?php echo $cpf;?>" required>
@@ -147,7 +147,7 @@ else
                 <br><br>
                 <div class="inputBox">
                     <input type="text" name="cargo" id="salario" class="inputUser"value="<?php echo $salario;?>" required>
-                    <label for="salario" class="labelInput">Salario</label>
+                    <label for="salario" class="labelInput">Salário</label>
                 </div>
                            
                 <br><br>

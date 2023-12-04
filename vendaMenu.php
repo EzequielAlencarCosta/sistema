@@ -57,6 +57,8 @@ function temPermissao($conexao, $idUsuario, $nomeFuncao)
             padding: 0; /* Remove default padding */
             display: flex;
             flex-direction: row;
+            background-image: url('img/vendas.png');
+            background-size: cover;
         }
 
         #menu {
@@ -111,24 +113,24 @@ function temPermissao($conexao, $idUsuario, $nomeFuncao)
     <div id="menu">
     <?php if (temFuncaoAdmin($conexao, $_SESSION['id'])) : ?>
         <!-- Se o usuário tiver a função 'admin', exibe todos os botões -->
-        <a href="vendaTabela.php"><font color=green>Criar Venda</font></a>
-        <a href="vendaCancelada.php"><font color=green>Vendas Canceladas</font></a>
-        <a href="vendaPesquisa.php"><font color=green>Vendas finalizada</font></a>
-        <a href="vendaCancelamento.php"><font color=green>Cancelar Venda</font></a>
-        <a href="orcamentoPesquisa.php"><font color=green>Oraçamentos</font></a>
-        <a href="orcamentoTabela.php"><font color=green>Criar orçamento</font></a>
-        <a href="principal.php"><font color=green>Pagina Inicial</font></a>
+        <a href="vendaTabela.php"><font color=white>Criar Venda</font></a>
+        <a href="vendaCancelada.php"><font color=white>Vendas Canceladas</font></a>
+        <a href="vendaPesquisa.php"><font color=white>Vendas finalizada</font></a>
+        <a href="vendaCancelamento.php"><font color=white>Cancelar Venda</font></a>
+        <a href="orcamentoPesquisa.php"><font color=white>Oraçamentos</font></a>
+        <a href="orcamentoTabela.php"><font color=white>Criar orçamento</font></a>
+        <a href="principal.php"><font color=white>Pagina Inicial</font></a>
         
         <!-- Adicione outros botões conforme necessário -->
     <?php else : ?>
         <!-- Caso contrário, verifica as permissões individuais -->
-        <a href="vendaMenu.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'venda') ? '' : 'style="display:none;"'; ?>><font color=green>Vendas</font></a>
-        <a href="vendaCancelada.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'venda') ? '' : 'style="display:none;"'; ?>><font color=green>Vendas Canceladas</font></a>
-        <a href="vendaPesquisa.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'venda') ? '' : 'style="display:none;"'; ?>><font color=green>Vendas Finalizadas</font></a>
-        <a href="cancelamentoVendasPesquisa.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'vendascancel') ? '' : 'style="display:none;"'; ?>><font color=green>Cancelamento de Vendas</font></a>
-        <a href="principal.php"><font color=green>Pagina Inicial</font></a>
-        <a href="orcamentoPesquisa.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'venda') ? '' : 'style="display:none;"'; ?>><font color=green>Oraçamentos</font></a>
-        <a href="orcamentoTabela.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'venda') ? '' : 'style="display:none;"'; ?>><font color=green>Criar orçamento</font></a>
+        <a href="vendaMenu.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'venda') ? '' : 'style="display:none;"'; ?>><font color=white>Vendas</font></a>
+        <a href="vendaCancelada.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'venda') ? '' : 'style="display:none;"'; ?>><font color=white>Vendas Canceladas</font></a>
+        <a href="vendaPesquisa.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'venda') ? '' : 'style="display:none;"'; ?>><font color=white>Vendas Finalizadas</font></a>
+        <a href="cancelamentoVendasPesquisa.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'vendascancel') ? '' : 'style="display:none;"'; ?>><font color=white>Cancelamento de Vendas</font></a>
+        <a href="orcamentoPesquisa.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'venda') ? '' : 'style="display:none;"'; ?>><font color=white>Oraçamentos</font></a>
+        <a href="orcamentoTabela.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'venda') ? '' : 'style="display:none;"'; ?>><font color=white>Criar orçamento</font></a>
+        <a href="principal.php"><font color=white>Pagina Inicial</font></a>
         <!-- Adicione verificações para outros botões conforme necessário -->
     <?php endif; ?>
       
@@ -137,8 +139,8 @@ function temPermissao($conexao, $idUsuario, $nomeFuncao)
     </div>
 
     <div id="conteudo">
-        <h1>Fabrica de bolos</h1>
-        <h2>Seja bem vindo!</h2>
+        <h1>GERENCIAMENTO DE VENDAS</h1>
+       
 
         <!-- Conteúdo de cada seção -->
         <section id="funcionario">

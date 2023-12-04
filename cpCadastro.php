@@ -199,7 +199,7 @@
                 <label for="vencimento"><b>Data do Vencimento:</b></label>
                 <input type="date" name="vencimento" id="vencimento" value="<?php echo date('Y-m-d'); ?>" required>
                 <br>
-                <br><br><br>        
+                <br><br><br>   <br><br>     
                 <input type="submit" name="submit" id="submit">
             </fieldset>
         </form>

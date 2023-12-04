@@ -48,7 +48,7 @@ else
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário | GN</title>
+    <title>Formulário </title>
     <style>
         body{
             font-family: Arial, Helvetica, sans-serif;
@@ -131,11 +131,11 @@ else
     <form action="funcionarioSaveEdit.php" method="POST">
         
         <fieldset>
-                <legend><b>Editar de Funcionarios</b></legend>
+                <legend><b>Editar de Funcionários</b></legend>
                 <br><!--cpf,nr_ctps,admissao,cargo,salario,departamento-->
                 <div class="inputBox">
                     <input type="text" name="cpf" id="cpf" class="inputUser" value="<?php echo $cpf;?>" required>
-                    <label for="cpf" class="labelInput">Cpf</label>
+                    <label for="cpf" class="labelInput">CPF</label>
                                            
                 </div>
                 <br>
@@ -157,7 +157,7 @@ else
                 <br><br>
                 <div class="inputBox">
                     <input type="text" name="salario" id="salario" class="inputUser"value="<?php echo $salario;?>" required>
-                    <label for="salario" class="labelInput">Salario</label>
+                    <label for="salario" class="labelInput">Salário</label>
                 </div>
                            
                 <br><br>

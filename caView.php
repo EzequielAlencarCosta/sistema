@@ -19,12 +19,12 @@
     if(!empty($_GET['search']))
     {
         $data = $_GET['search'];
-        $sql = "SELECT * FROM CAVIEW WHERE ID LIKE '%$data%' or nome_funcao LIKE '%$data%'or nome LIKE '%$data%' ORDER BY id DESC";
+        $sql = "SELECT * FROM caview WHERE ID LIKE '%$data%' or nome_funcao LIKE '%$data%'or nome LIKE '%$data%' ORDER BY id DESC";
     }
     else
     {
         $data1=$_GET['id'];   
-        $sql = "SELECT * FROM CAVIEW WHERE ID = $data1 ORDER BY id DESC";
+        $sql = "SELECT * FROM caview WHERE ID = $data1 ORDER BY id DESC";
     }
     $result = $conexao->query($sql);
     

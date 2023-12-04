@@ -40,7 +40,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário | GN</title>
+    <title>Formulário</title>
     <style>
         body{
             font-family: Arial, Helvetica, sans-serif;
@@ -120,7 +120,7 @@
     <div class="box">
         <form action="usuarioSaveEdit.php" method="POST">
             <fieldset>
-                <legend><b>Editar Usuario</b></legend>
+                <legend><b>Editar Usuário</b></legend>
                 <br>
                 
                 <div class="inputBox">

@@ -57,6 +57,8 @@ function temPermissao($conexao, $idUsuario, $nomeFuncao)
             padding: 0; /* Remove default padding */
             display: flex;
             flex-direction: row;
+            background-image: url('img/fundo_principal.png');
+            background-size: cover;
         }
 
         #menu {
@@ -111,40 +113,36 @@ function temPermissao($conexao, $idUsuario, $nomeFuncao)
     <div id="menu">
     <?php if (temFuncaoAdmin($conexao, $_SESSION['id'])) : ?>
         <!-- Se o usuário tiver a função 'admin', exibe todos os botões -->
-        <a href="funcionarioPesquisa.php"><font color=green>Funcionário</font></a>
-        <a href="fornecedorPesquisa.php"><font color=green>Fornecedor</font></a>
-        <a href="materiaPrimaPesquisa.php"><font color=green>Matéria Prima</font></a>
-        <a href="receitaPesquisa.php"><font color=green>Receitas</font></a>
-        <a href="produtoPesquisa.php"><font color=green>Produtos</font></a>
-        <a href="estoquePesquisa.php"><font color=green>Estoque</font></a>
-        <!--<a href="vendasBalcaoPesquisa.php">Vendas Balcão</a>-->
-        <a href="usuarioPesquisa.php"><font color=green>Usuários</font></a>
-         <!--<a href="vendaCancelamento.php"><font color=green>Cancelamento de Vendas</font></a>-->
-        <a href="caPesquisa.php"><font color=green>Controle de Acesso</font></a>
-        <a href="notafiscalMenu.php"><font color=green>Nota Fiscal</font></a>
-        <a href="comissaoPesquisa.php"><font color=green>Comissão dos Atendentes</font></a>
-        <a href="vendaMenu.php"><font color=green>Vendas</font></a>
-        <a href="cpPesquisa.php"><font color=green>Contas  a Pagar</font></a>
-        <a href="crPesquisa.php"><font color=green>Contas  a Receber</font></a> 
+        <a href="usuarioPesquisa.php"><font color=white>Usuários</font></a>
+        <a href="funcionarioPesquisa.php"><font color=white>Funcionário</font></a>
+        <a href="fornecedorPesquisa.php"><font color=white>Fornecedor</font></a>
+        <a href="materiaPrimaPesquisa.php"><font color=white>Matéria Prima</font></a>
+        <a href="receitaPesquisa.php"><font color=white>Receitas</font></a>
+        <a href="produtoPesquisa.php"><font color=white>Produtos</font></a>
+        <a href="estoquePesquisa.php"><font color=white>Estoque</font></a>
+        <a href="caPesquisa.php"><font color=white>Controle de Acesso</font></a>
+        <a href="notafiscalMenu.php"><font color=white>Nota Fiscal</font></a>
+        <a href="comissaoPesquisa.php"><font color=white>Comissão dos Atendentes</font></a>
+        <a href="vendaMenu.php"><font color=white>Vendas</font></a>
+        <a href="cpPesquisa.php"><font color=white>Contas  a Pagar</font></a>
+        <a href="crPesquisa.php"><font color=white>Contas  a Receber</font></a> 
         <!-- Adicione outros botões conforme necessário -->
     <?php else : ?>
         <!-- Caso contrário, verifica as permissões individuais -->
-        <a href="funcionarioPesquisa.php" <?php echo temPermissao($conexao, $_SESSION['id'], 'funcionario') ? '' : 'style="display:none;"'; ?>><font color=green>Funcionário</font></a>
-        <a href="fornecedorPesquisa.php" <?php echo temPermissao($conexao, $_SESSION['id'], 'fornecedor') ? '' : 'style="display:none;"'; ?>><font color=green>Fornecedor</font></a>
-        <a href="materiaPrimaPesquisa.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'materia') ? '' : 'style="display:none;"'; ?>><font color=green>Matéria Prima</font></a>
-        <a href="receitaPesquisa.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'receita') ? '' : 'style="display:none;"'; ?>><font color=green>Receitas</font></a>
-        <a href="produtoPesquisa.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'produto') ? '' : 'style="display:none;"'; ?>><font color=green>Produtos</font></a>
-        <a href="estoquePesquisa.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'estoque') ? '' : 'style="display:none;"'; ?>><font color=green>Estoque</font></a>
-        <!--<a href="vendasBalcaoPesquisa.php"<php echo temPermissao($conexao, $_SESSION['id'], 'balcao') ? '' : 'style="display:none;"'; ?>>Vendas Balcão</a>-->
-        <a href="usuarioPesquisa.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'usuario') ? '' : 'style="display:none;"'; ?>><font color=green>Usuários</font></a>
-        <!--<a href="cancelamentoVendasPesquisa.php" <php echo temPermissao($conexao, $_SESSION['id'], 'vendascancel') ? '' : 'style="display:none;"'; ?>><font color=green>Cancelamento de Vendas</font></a>-->
-        <a href="caPesquisa.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'acessos') ? '' : 'style="display:none;"'; ?>><font color=green>Controle de Acesso</font></a>
+        <a href="usuarioPesquisa.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'usuario') ? '' : 'style="display:none;"'; ?>><font color=white>Usuários</font></a>
+        <a href="funcionarioPesquisa.php" <?php echo temPermissao($conexao, $_SESSION['id'], 'funcionario') ? '' : 'style="display:none;"'; ?>><font color=white>Funcionário</font></a>
+        <a href="fornecedorPesquisa.php" <?php echo temPermissao($conexao, $_SESSION['id'], 'fornecedor') ? '' : 'style="display:none;"'; ?>><font color=white>Fornecedor</font></a>
+        <a href="materiaPrimaPesquisa.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'materia') ? '' : 'style="display:none;"'; ?>><font color=white>Matéria Prima</font></a>
+        <a href="receitaPesquisa.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'receita') ? '' : 'style="display:none;"'; ?>><font color=white>Receitas</font></a>
+        <a href="produtoPesquisa.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'produto') ? '' : 'style="display:none;"'; ?>><font color=white>Produtos</font></a>
+        <a href="estoquePesquisa.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'estoque') ? '' : 'style="display:none;"'; ?>><font color=white>Estoque</font></a>
+        <a href="caPesquisa.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'acessos') ? '' : 'style="display:none;"'; ?>><font color=white>Controle de Acesso</font></a>
         <a href="notafiscalMenu.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'notaemissao') ? '' : 'style="display:none;"'; ?>>Nota Fiscal</a>
         <a href="#comissaoAtendentes"<?php echo temPermissao($conexao, $_SESSION['id'], 'gerente') ? '' : 'style="display:none;"'; ?>>Comissão dos Atendentes</a>
-        <a href="vendaMenu.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'venda') ? '' : 'style="display:none;"'; ?>><font color=green>Vendas</font></a>
+        <a href="vendaMenu.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'venda') ? '' : 'style="display:none;"'; ?>><font color=white>Vendas</font></a>
         <a href="#promocoes"<?php echo temPermissao($conexao, $_SESSION['id'], 'gerente') ? '' : 'style="display:none;"'; ?>>Promoções</a>
-        <a href="cpPesquisa.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'financeiro') ? '' : 'style="display:none;"'; ?>><font color=green>Contas  a Pagar</font></a>
-        <a href="crPesquisa.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'financeiro') ? '' : 'style="display:none;"'; ?>><font color=green>Contas  a Pagar</font></a>
+        <a href="cpPesquisa.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'financeiro') ? '' : 'style="display:none;"'; ?>><font color=white>Contas  a Pagar</font></a>
+        <a href="crPesquisa.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'financeiro') ? '' : 'style="display:none;"'; ?>><font color=white>Contas  a Pagar</font></a>
         <!-- Adicione verificações para outros botões conforme necessário -->
     <?php endif; ?>
       
@@ -153,8 +151,8 @@ function temPermissao($conexao, $idUsuario, $nomeFuncao)
     </div>
 
     <div id="conteudo">
-        <h1>Fabrica de bolos</h1>
-        <h2>Seja bem vindo!</h2>
+       <br>
+        <h1>Seja bem vindo!</h1>
 
         <!-- Conteúdo de cada seção -->
         <section id="funcionario">

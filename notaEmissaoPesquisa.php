@@ -16,7 +16,7 @@
     if(!empty($_GET['search']))
     {
         $data = $_GET['search'];
-        $sql = "SELECT * FROM nota_emissao WHERE id LIKE '%$data%' or data_pedido LIKE '%$data%'  OR nome LIKE '%$data%' OR nome LIKE '%$data%' and status='F'  ORDER BY id DESC";
+        $sql = "SELECT * FROM nota_emissao WHERE status_nf <>'E'  and id LIKE '%$data%'   ORDER BY id DESC";
 
     }
     else
@@ -84,7 +84,7 @@
     </nav>
     <br>
     <?php
-        echo "<h4>Bem vindo a EMISSÃO DE NOTAS FISCAIS </h4>
+        echo "<h4>EMISSÃO DE NOTAS FISCAIS </h4>
         <h5> Usuário: <u>$nome_usuario</u></h5>";
        
     ?>
@@ -148,7 +148,7 @@
 
     function searchData()
     {
-        window.location = 'vendaPesquisa.php?search='+search.value;
+        window.location = 'notaEmissaoPesquisa.php?search='+search.value;
     }
 </script>
 </html>

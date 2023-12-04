@@ -43,6 +43,7 @@
                               
             }
         }
+        date_default_timezone_set('America/Sao_Paulo');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -130,22 +131,13 @@
     <div class="box">
         <form action="notaSaveEdit.php" method="POST">
             <fieldset>
-                <legend><b>Editar Usuario</b></legend>
+                <legend><b>Emitir Nota Fiscal</b></legend>
                 <br>
         
-               <!-- insert notafiscal
-                 $id_pedido = $user_data['id'];
-                $cliente_nome = $user_data['nome'];
-                $cliente_endereco = $user_data['endereco'];
-                $cliente_cpf = $user_data['cpf'];
-                $empresa_nome = $user_data['empresa_nome'];
-                $empresa_cnpj = $user_data['empresa_cnpj'];
-                $data_emissao = $user_data['data_emissao'];
-                $valor_total = $user_data['total'];
-                $iss = $user_data['iss'];-->
+              
                 <div class="inputBox">
                     <input type="text" name="id_pedido" id="id_pedido" class="inputUser" value="<?php echo $id_pedido;?>" required>
-                    <label for="id_pedido" class="labelInput">nro pedido</label>
+                    <label for="id_pedido" class="labelInput">Nro pedido</label>
                 </div>
                 <br>
                 <div class="inputBox">
@@ -160,7 +152,7 @@
                 <br><br>
                 <div class="inputBox">
                     <input type="text" name="cliente_cpf" id="cliente_cpf" class="inputUser" value="<?php echo $cliente_cpf;?>" required>
-                    <label for="cliente_cpf" class="labelInput">Cpf</label>
+                    <label for="cliente_cpf" class="labelInput">CPF</label>
                 </div>
                 <br><br>
                 <div class="inputBox">
@@ -170,7 +162,7 @@
                 <br><br>
                 <div class="inputBox">
                 <label for="data_emissao"><b>Data de Emissão:</b></label>
-                <input type="date" name="data_emissao" id="data_emissao" value="<?php echo $data_emissao;?>" required>
+                <input type="date" name="data_emissao" id="data_emissao" value="<?php echo date('Y-m-d'); ?>" required>
     </div><br><br>
              <input type="hidden" name="empresa_nome" value=<?php echo $empresa_nome;?>>
              <input type="hidden" name="empresa_cnpj" value=<?php echo $empresa_cnpj;?>>

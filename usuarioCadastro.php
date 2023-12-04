@@ -134,7 +134,7 @@
                 </div>
                 <br>
                 <div class="inputBox">
-                    <input type="number" name="cpf" id="cpf" class="inputUser" required>
+                    <input type="text" name="cpf" id="cpf" class="inputUser" required>
                     <label for="cpf" class="labelInput">CPF</label>
                 </div>
                 <br>

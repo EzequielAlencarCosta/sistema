@@ -84,7 +84,8 @@
     </nav>
     <br>
     <?php
-        echo "<h1>Bem vindo <u>$nome_usuario</u></h1>";
+        echo "<h4> ORÇAMENTOS PENDENTES </h4>
+        <h5> Usuário: <u>$nome_usuario</u></h5>";
     ?>
     <br>
     <div class="box-search">

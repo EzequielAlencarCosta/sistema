@@ -78,7 +78,7 @@
     </nav>
     <br>
     <?php
-        echo "<h4>Bem vindo a INFORMAÇÕES DE USUÁRIOS </h4>
+        echo "<h4>INFORMAÇÕES DE USUÁRIOS </h4>
         <h5> Usuário: <u>$nome_usuario</u></h5>";
        
     ?>
@@ -119,14 +119,9 @@
                         echo "<tr>";
                         echo "<td>".$user_data['id']."</td>";
                         echo "<td>".$user_data['nome']."</td>";
-                        /*echo "<td>".$user_data['senha']."</td>";*/
                         echo "<td>".$user_data['email']."</td>";
                         echo "<td>".$user_data['telefone']."</td>";
-                       /* echo "<td>".$user_data['sexo']."</td>";
-                        echo "<td>".$user_data['data_nasc']."</td>";
-                        echo "<td>".$user_data['cidade']."</td>";
-                        echo "<td>".$user_data['estado']."</td>";
-                        echo "<td>".$user_data['endereco']."</td>";*/
+                    
                         echo "<td>
                         <a class='btn btn-sm btn-primary' href='usuarioEdita.php?id=$user_data[id]' title='Editar'>
                             <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>

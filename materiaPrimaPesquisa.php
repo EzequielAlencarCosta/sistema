@@ -78,7 +78,7 @@
     </nav>
     <br>
     <?php
-        echo "<h4>Bem vindo a INFORMAÇÕES DE MATÉRIA PRIMA </h4>
+        echo "<h4>INFORMAÇÕES DE MATÉRIA PRIMA </h4>
         <h5> Usuário: <u>$nome_usuario</u></h5>";
        
     ?>
@@ -106,7 +106,7 @@
                     <th scope="col">#</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Fornecedor</th>
-                    <th scope="col">quantidade</th>
+                    <th scope="col">Quantidade</th>
                     <th scope="col">Data de validade</th>
                     <th scope="col">...</th>
                 </tr>

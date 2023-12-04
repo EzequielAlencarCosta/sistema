@@ -16,7 +16,7 @@
     if(!empty($_GET['search']))
     {
         $data = $_GET['search'];
-        $sql = "SELECT * FROM receitas WHERE id LIKE '%$data%' or nome LIKE '%$data%'    ORDER BY id DESC";
+        $sql = "SELECT * FROM receitas WHERE id LIKE '%$data%' or nome LIKE '%$data%' or autor LIKE '%$data%'   ORDER BY id DESC";
     }
     else
     {
@@ -78,7 +78,7 @@
     </nav>
     <br>
     <?php
-        echo "<h4>Bem vindo a INFORMAÇÕES DE RECEITAS </h4>
+        echo "<h4>INFORMAÇÕES DE RECEITAS </h4>
         <h5> Usuário: <u>$nome_usuario</u></h5>";
        
     ?>

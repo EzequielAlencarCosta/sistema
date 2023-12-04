@@ -95,7 +95,7 @@
     </nav>
     <br>
     <?php
-        echo "<h4>COMISSÃO FUNCIONARIOS </h4>
+        echo "<h4>COMISSÃO FUNCIONÁRIOS </h4>
         <h5> Usuário: <u>$nome_usuario</u></h5>";
        
     ?>
@@ -127,8 +127,8 @@
                 <tr>
                     <th scope="col">Id Pedido</th>
                     <th scope="col">Funcionario</th>
-                    <th scope="col">comissão</th>
-                    <th scope="col">data</th>
+                    <th scope="col">Comissão</th>
+                    <th scope="col">Data</th>
 
                     <th scope="col">Tipo</th>
                 </tr>

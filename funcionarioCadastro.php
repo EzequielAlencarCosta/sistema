@@ -61,12 +61,16 @@
     }
 
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/inputmask@5/dist/jquery.inputmask.min.js"></script>
+  
     <title>Formulário | GN</title>
     <style>
         body{
@@ -143,6 +147,7 @@
     </style>
 </head>
 <body>
+
 <?php
              ;
        
@@ -153,12 +158,18 @@
     <form action="funcionarioCadastro.php" method="POST">
             
         <fieldset>
-                <legend><b>Cadastro de Funcionarios</b></legend>
+                <legend><b>Cadastro de Funcionários</b></legend>
                 <br><!--cpf,nr_ctps,admissao,cargo,salario,departamento-->
                 <div class="inputBox">
-                    <input type="text" name="cpf" id="cpf" class="inputUser" required>
+                    <input type="text" name="cpf" id="cpf" class="inputUser" maxlength="14" required>
                     <label for="cpf" class="labelInput">Cpf</label>
                 </div>
+                <script>
+      // Aplica a máscara de CPF ao campo de entrada
+      $(document).ready(function(){
+        $('cpf').inputmask('999.999.999-99');
+      });
+    </script>
                 <br>
                 <div class="inputBox">
                     <input type="text" name="nr_ctps" id="nr_ctps" class="inputUser" required>

@@ -31,7 +31,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>SISTEMA | GN</title>
+    <title>Controle de acesso</title>
     <style>
         body{
             background: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
@@ -78,7 +78,7 @@
     </nav>
     <br>
     <?php
-        echo "<h4>Bem vindo a INFORMAÇÕES CONTAS CONTROLE DE ACESSO </h4>
+        echo "<h4>CONTROLE DE ACESSOS </h4>
         <h5> Usuário: <u>$nome_usuario</u></h5>";
        
     ?>
@@ -99,15 +99,9 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Nome</th>
-                    <!--<th scope="col">Senha</th>-->
                     <th scope="col">Email</th>
                     <th scope="col">Telefone</th>
-                    <!--<th scope="col">Sexo</th>
-                     <th scope="col">Data de Nascimento</th>
-                    <th scope="col">Cidade</th>
-                    <th scope="col">Estado</th>
-                    <th scope="col">Endereço</th>--> 
-                    <th scope="col">editar funções</th>
+                    <th scope="col">Editar Permissões</th>
                 </tr>
             </thead>
             <tbody>
@@ -116,14 +110,9 @@
                         echo "<tr>";
                         echo "<td>".$user_data['id']."</td>";
                         echo "<td>".$user_data['nome']."</td>";
-                        /*echo "<td>".$user_data['senha']."</td>";*/
                         echo "<td>".$user_data['email']."</td>";
                         echo "<td>".$user_data['telefone']."</td>";
-                       /* echo "<td>".$user_data['sexo']."</td>";
-                        echo "<td>".$user_data['data_nasc']."</td>";
-                        echo "<td>".$user_data['cidade']."</td>";
-                        echo "<td>".$user_data['estado']."</td>";
-                        echo "<td>".$user_data['endereco']."</td>";*/
+                     
                         echo "<td>
                         <a class='btn btn-sm btn-primary' href='caView.php?id=$user_data[id]' title='Visualizar'>
                         <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-eye' viewBox='0 0 16 16'>

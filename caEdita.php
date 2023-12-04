@@ -51,7 +51,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário | GN</title>
+    <title>Formulário</title>
     <style>
         body{
             font-family: Arial, Helvetica, sans-serif;
@@ -131,7 +131,7 @@
     <div class="box">
         <form action="caSaveEdit.php" method="POST">
             <fieldset>
-                <legend><b>Editar Usuario</b></legend>
+                <legend><b>Editar Usuário</b></legend>
                 <br>
                 
                 <div class="inputBox">
@@ -145,37 +145,37 @@
 
   <div>
     <input type="checkbox" id="funcionario" name="funcionario" value="funcionario"  > 
-    <label for="funcionario">funcionarios</label>
+    <label for="funcionario">Funcionários</label>
     
     <input type="checkbox" id="fornecedor" name="fornecedor" value="fornecedor"  > 
-    <label for="fornecedor">fornecedor</label>
+    <label for="fornecedor">Fornecedor</label>
     
     <input type="checkbox" id="materiaPrima" name="materiaPrima" value="materiaPrima"  > 
-    <label for="materiaPrima">materiaPrima</label>
+    <label for="materiaPrima">Materia Prima</label>
     <br>
     <input type="checkbox" id="admin" name="admin" value="admin"  > 
-    <label for="admin">admin</label>
+    <label for="admin">Admin</label>
     
     <input type="checkbox" id="receita" name="receita" value="receita"  > 
-    <label for="receita">receita</label>
+    <label for="receita">Receita</label>
     
     <input type="checkbox" id="Produtos" name="Produtos" value="Produtos"  > 
     <label for="Produtos">Produtos</label>
     <br>
     <input type="checkbox" id="estoque" name="estoque" value="estoque"  > 
-    <label for="estoque">estoque</label>
+    <label for="estoque">Estoque</label>
     
     <input type="checkbox" id="vendas" name="vendas" value="vendas"  > 
-    <label for="vendas">vendas</label>
+    <label for="vendas">Vendas</label>
     
     <input type="checkbox" id="usuarios" name="usuarios" value="usuarios"  > 
     <label for="usuarios">usuarios</label>
     <br> 
     <input type="checkbox" id="comissao" name="comissao" value="comissao"  > 
-    <label for="comissao">comissao</label>
+    <label for="comissao">Comissão</label>
     
     <input type="checkbox" id="financeiro" name="financeiro" value="financeiro" > 
-    <label for="financeiro">financeiro</label>
+    <label for="financeiro">Financeiro</label>
     <br>
 </div>
 

@@ -57,6 +57,8 @@ function temPermissao($conexao, $idUsuario, $nomeFuncao)
             padding: 0; /* Remove default padding */
             display: flex;
             flex-direction: row;
+            background-image: url('img/Nota_fiscal.jpg');
+            background-size: cover;
         }
 
         #menu {
@@ -111,19 +113,19 @@ function temPermissao($conexao, $idUsuario, $nomeFuncao)
     <div id="menu">
     <?php if (temFuncaoAdmin($conexao, $_SESSION['id'])) : ?>
         <!-- Se o usuário tiver a função 'admin', exibe todos os botões -->
-        <a href="notaEmissaoPesquisa.php"><font color=green>Gerar NF</font></a>
-        <a href="nfCancelamento.php"><font color=green>Cancelar NF</font></a>
-        <a href="notaEmitidaPesquisa.php"><font color=green>Pesquisar NF</font></a>
-        <a href="principal.php"><font color=green>Pagina Inicial</font></a>
+        <a href="notaEmissaoPesquisa.php"><font color=white>Gerar Nota</font></a>
+        <a href="nfCancelamento.php"><font color=white>Cancelar Nota</font></a>
+        <a href="notaEmitidaPesquisa.php"><font color=white>Pesquisar Nota</font></a>
+        <a href="principal.php"><font color=white>Pagina Inicial</font></a>
         
         
         <!-- Adicione outros botões conforme necessário -->
     <?php else : ?>
         <!-- Caso contrário, verifica as permissões individuais -->
-        <a href="notaEmissaoPesquisa.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'notaemissao') ? '' : 'style="display:none;"'; ?>>Emissão de Nota Fiscal</a>
-        <a href="nfCancelamento.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'notacancel') ? '' : 'style="display:none;"'; ?>>Cancelamento de Nota Fiscal</a>
-        <a href="notaEmitidaPesquisa.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'notacancel') ? '' : 'style="display:none;"'; ?>><font color=green>Pesquisar NF</font></a>
-        <a href="principal.php"><font color=green>Pagina Inicial</font></a>
+        <a href="notaEmissaoPesquisa.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'notaemissao') ? '' : 'style="display:none;"'; ?>>Gerar Nota</a>
+        <a href="nfCancelamento.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'notacancel') ? '' : 'style="display:none;"'; ?>>Cancelar Nota</a>
+        <a href="notaEmitidaPesquisa.php"<?php echo temPermissao($conexao, $_SESSION['id'], 'notacancel') ? '' : 'style="display:none;"'; ?>><font color=white>Pesquisar Nota</font></a>
+        <a href="principal.php"><font color=white>Pagina Inicial</font></a>
         <!-- Adicione verificações para outros botões conforme necessário -->
     <?php endif; ?>
       
@@ -132,8 +134,8 @@ function temPermissao($conexao, $idUsuario, $nomeFuncao)
     </div>
 
     <div id="conteudo">
-        <h1>Fabrica de bolos</h1>
-        <h2>Seja bem vindo!</h2>
+       
+       
 
         <!-- Conteúdo de cada seção -->
         <section id="funcionario">

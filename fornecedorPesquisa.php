@@ -31,7 +31,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>SISTEMA | Pesquisa Fornecedor</title>
+    <title>Pesquisa Fornecedor</title>
     <style>
         body{
             background: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
@@ -80,7 +80,7 @@
     </nav>
     <br>
     <?php
-        echo "<h4>Bem vindo a INFORMAÇÕES DE FORNECEDOR </h4>
+        echo "<h4>INFORMAÇÕES DE FORNECEDOR </h4>
         <h5> Usuário: <u>$nome_usuario</u></h5>";
        
     ?>

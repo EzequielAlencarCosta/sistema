@@ -16,7 +16,7 @@
     if(!empty($_GET['search']))
     {
         $data = $_GET['search'];
-        $sql = "SELECT b.nome,a.* FROM funcionarios a INNER JOIN usuarios b ON a.cpf = b.cpf where  a.cpf LIKE '%$data%' or a.nr_ctps LIKE '%$data%' ORDER BY id desc";
+        $sql = "SELECT b.nome,a.* FROM funcionarios a INNER JOIN usuarios b ON a.cpf = b.cpf where  a.cpf LIKE '%$data%' or b.nome LIKE '%$data%' ORDER BY id desc";
     }
     else
     {
@@ -80,13 +80,13 @@
     </nav>
     <br>
     <?php
-        echo "<h4>Bem vindo a INFORMAÇÕES DE FUNCIONARIOS </h4>
+        echo "<h4>INFORMAÇÕES DE FUNCIONÁRIOS </h4>
         <h5> Usuário: <u>$nome_usuario</u></h5>";
        
     ?>
     <br>
     <div class="box-search">
-        <input type="search" class="form-control w-25" placeholder="Pesquisar por nome, id e e-mail" id="pesquisar">
+        <input type="search" class="form-control w-25" placeholder="Pesquisar por CPF ou NOME" id="pesquisar">
         <button onclick="searchData()" class="btn btn-primary">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
@@ -95,7 +95,7 @@
     </div>
     <br>
     <div class="d-flex">
-            <a href="funcionarioCadastro.php" class="button">+ Funcionario</a>
+            <a href="funcionarioCadastro.php" class="button">+ Funcionário</a>
         </div>
         <br>
     <div class="m-5">
@@ -104,15 +104,7 @@
                 <tr>
                 <th scope="col">#</th>
                     <th scope="col">CPF</th>
-                    <th scope="col">Nome Funcionario</th>
-                    <!--<th scope="col">Senha</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Telefone</th>
-                    <th scope="col">Sexo</th>
-                     <th scope="col">Data de Nascimento</th>
-                    <th scope="col">Cidade</th>
-                    <th scope="col">Estado</th>
-                    <th scope="col">Endereço</th>--> 
+                    <th scope="col">Nome Funcionário</th>
                     <th scope="col">...</th>
                 </tr>
             </thead>
@@ -123,14 +115,6 @@
                         echo "<td>".$user_data['id']."</td>";
                         echo "<td>".$user_data['cpf']."</td>";
                         echo "<td>".$user_data['nome']."</td>";
-                        /*echo "<td>".$user_data['senha']."</td>";  
-                        echo "<td>".$user_data['email']."</td>";
-                        echo "<td>".$user_data['telefone']."</td>";
-                       /* echo "<td>".$user_data['sexo']."</td>";
-                        echo "<td>".$user_data['data_nasc']."</td>";
-                        echo "<td>".$user_data['cidade']."</td>";
-                        echo "<td>".$user_data['estado']."</td>";
-                        echo "<td>".$user_data['endereco']."</td>";*/
                         echo "<td>
                        
                         <a class='btn btn-sm btn-primary' href='funcionarioView.php?id=$user_data[id]' title='Visualizar'>
